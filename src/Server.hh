@@ -9,6 +9,7 @@
 
 #include "Config.hh"
 #include "zebra/Service.hh"
+#include "zod/PubService.hh"
 
 namespace zerg {
 
@@ -26,6 +27,8 @@ class Server : public zebra::ServiceCallback {
 
  private:
   std::unique_ptr<Config> config_;
+
+  std::unique_ptr<zod::PubService> pub_service_;
 
   std::unique_ptr<zebra::Service> zebra_service_;
 };

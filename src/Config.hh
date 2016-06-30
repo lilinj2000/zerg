@@ -21,6 +21,7 @@ class Options : public soil::Options {
 
   virtual po::options_description* configOptions();
 
+  std::string xsub_addr;
   std::string log_cfg;
 
  private:

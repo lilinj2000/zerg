@@ -12,7 +12,8 @@ zerg_CPPFLAGS =  \
 		$(SPY_CPPFLAGS) \
 		$(ZEBRA_CPPFLAGS) \
 		$(RAPIDJSON_CPPFLAGS) \
-		$(JSON_CPPFLAGS)
+		$(JSON_CPPFLAGS) \
+		$(ZOD_CPPFLAGS)
 
 
 zerg_LDADD = \
@@ -20,7 +21,8 @@ zerg_LDADD = \
 	$(SOIL_LIBADD) \
 	$(AIR_LIBADD) \
 	$(ZEBRA_LIBADD) \
-	$(JSON_LIBADD)
+	$(JSON_LIBADD) \
+	$(ZOD_LIBADD)
 
 
 zerg_LDFLAGS = $(LIBADD_DL) -Wl,--no-as-needed -pthread

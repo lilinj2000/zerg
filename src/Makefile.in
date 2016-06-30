@@ -101,7 +101,8 @@ am_zerg_OBJECTS = zerg-Config.$(OBJEXT) zerg-Server.$(OBJEXT) \
 zerg_OBJECTS = $(am_zerg_OBJECTS)
 am__DEPENDENCIES_1 =
 zerg_DEPENDENCIES = $(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1)
+	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
+	$(am__DEPENDENCIES_1)
 AM_V_lt = $(am__v_lt_@AM_V@)
 am__v_lt_ = $(am__v_lt_@AM_DEFAULT_V@)
 am__v_lt_0 = --silent
@@ -287,6 +288,9 @@ VERSION = @VERSION@
 ZEBRA_CPPFLAGS = @ZEBRA_CPPFLAGS@
 ZEBRA_HOME = @ZEBRA_HOME@
 ZEBRA_LIBADD = @ZEBRA_LIBADD@
+ZOD_CPPFLAGS = @ZOD_CPPFLAGS@
+ZOD_HOME = @ZOD_HOME@
+ZOD_LIBADD = @ZOD_LIBADD@
 abs_builddir = @abs_builddir@
 abs_srcdir = @abs_srcdir@
 abs_top_builddir = @abs_top_builddir@
@@ -352,14 +356,16 @@ zerg_CPPFLAGS = \
 		$(SPY_CPPFLAGS) \
 		$(ZEBRA_CPPFLAGS) \
 		$(RAPIDJSON_CPPFLAGS) \
-		$(JSON_CPPFLAGS)
+		$(JSON_CPPFLAGS) \
+		$(ZOD_CPPFLAGS)
 
 zerg_LDADD = \
 	$(BOOST_LIBADD) \
 	$(SOIL_LIBADD) \
 	$(AIR_LIBADD) \
 	$(ZEBRA_LIBADD) \
-	$(JSON_LIBADD)
+	$(JSON_LIBADD) \
+	$(ZOD_LIBADD)
 
 zerg_LDFLAGS = $(LIBADD_DL) -Wl,--no-as-needed -pthread
 

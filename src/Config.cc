@@ -17,6 +17,8 @@ Options::Options():
   namespace po = boost::program_options;
 
   config_options_.add_options()
+      ("zerg.xsub_addr", po::value<std::string>(&xsub_addr),
+       "xsub address")
       ("zerg.log_cfg", po::value<std::string>(&log_cfg),
          "log config file");
   return;
