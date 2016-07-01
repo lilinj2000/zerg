@@ -16,7 +16,7 @@ Server::Server(int argc, char* argv[]) {
   pub_service_.reset(
       zod::PubService::create(
           config_->zergOptions()->xsub_addr));
-      
+
   zebra_service_.reset(zebra::Service::createService(
       config_->zebraOptions(),
       config_->spyOptions(),
